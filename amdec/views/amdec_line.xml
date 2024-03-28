@@ -7,29 +7,38 @@
             <form string="Titre">
                 <sheet>
                     <group>
-                        <field name="name" />
+                        <group string="Info">
+                            <field name="amdec_id" string="AMDEC" />
+                            <field name="system_id" string="Système" />
+                            <field name="composante_id" />
+                        </group>
+                        <group string="Détails">
+                            <field name="defaillance_id" />
+                            <field name="cause" />
+                            <field name="effet" />
+                            <field name="action_entreprendre" />
+                        </group>
                     </group>
-                    <group>
-                        <field name="amdec_group_id" />
-                    </group>
-                    <group>
-                        <field name="amdec_id" />
-                    </group>
-                    <group>
-                        <field name="failure_mode_id" />
-                    </group>
-                    <group>
-                        <field name="historique_action_ids" />
-                    </group>
-                    <group>
+                    <group string="Algorithme">
+                        <field name="occurence" />
+                        <field name="detectabilite_id" />
+                        <field name="severite_id" />
+                        <field name="rpn" string="RPN" />
                         <field name="is_seuil_superior" />
                     </group>
-                    <group>
-                        <field name="rate" />
-                    </group>
-                    <group>
-                        <field name="system_id" />
-                    </group>
+                    <notebook>
+                        <page string="Inspection">
+                            <group>
+                                <field name="grille_occurence_id" />
+                                <field name="inspection_ids" />
+                            </group>
+                        </page>
+                        <page string="Actions">
+                            <group>
+                                <field name="historique_action_ids" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -40,12 +49,17 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <graph string="Amdec line">
-                <field name="name" type="row" />
-                <field name="amdec_group_id" type="row" />
                 <field name="amdec_id" type="row" />
+                <field name="cause" type="row" />
+                <field name="composante_id" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="detectabilite_id" type="row" />
+                <field name="effet" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
-                <field name="rate" type="measure" />
+                <field name="occurence" type="measure" />
+                <field name="rpn" type="measure" />
+                <field name="severite_id" type="row" />
                 <field name="system_id" type="row" />
             </graph>
         </field>
@@ -56,13 +70,19 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
-                <field name="name" />
-                <field name="amdec_group_id" />
                 <field name="amdec_id" />
+                <field name="cause" />
+                <field name="composante_id" />
+                <field name="defaillance_id" />
+                <field name="detectabilite_id" />
+                <field name="effet" />
                 <field name="failure_mode_id" />
                 <field name="historique_action_ids" />
+                <field name="inspection_ids" />
                 <field name="is_seuil_superior" />
-                <field name="rate" />
+                <field name="occurence" />
+                <field name="rpn" />
+                <field name="severite_id" />
                 <field name="system_id" />
                 <templates>
                     <t t-name="kanban-box">
@@ -71,17 +91,32 @@
                                 <ul>
                                     <li class="mb4">
                                         <strong>
-                                            <field name="name" />
-                                        </strong>
-                                    </li>
-                                    <li class="mb4">
-                                        <strong>
-                                            <field name="amdec_group_id" />
-                                        </strong>
-                                    </li>
-                                    <li class="mb4">
-                                        <strong>
                                             <field name="amdec_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="cause" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="composante_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="defaillance_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="detectabilite_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="effet" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -94,6 +129,11 @@
                                             <field name="historique_action_ids" />
                                         </strong>
                                     </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="inspection_ids" />
+                                        </strong>
+                                    </li>
                                     <li class="text-success float-right mb4" t-if="record.is_seuil_superior.raw_value">
                                         <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
@@ -102,7 +142,17 @@
                                     </li>
                                     <li class="mb4">
                                         <strong>
-                                            <field name="rate" />
+                                            <field name="occurence" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="rpn" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="severite_id" />
                                         </strong>
                                     </li>
                                     <li class="mb4">
@@ -124,12 +174,17 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <pivot string="Amdec line">
-                <field name="name" type="row" />
-                <field name="amdec_group_id" type="row" />
                 <field name="amdec_id" type="row" />
+                <field name="cause" type="row" />
+                <field name="composante_id" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="detectabilite_id" type="row" />
+                <field name="effet" type="row" />
                 <field name="failure_mode_id" type="row" />
                 <field name="is_seuil_superior" type="row" />
-                <field name="rate" type="measure" />
+                <field name="occurence" type="measure" />
+                <field name="rpn" type="measure" />
+                <field name="severite_id" type="row" />
                 <field name="system_id" type="row" />
             </pivot>
         </field>
@@ -140,17 +195,28 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <search string="Amdec line">
-                <filter domain="[('name','!=',False)]" name="name" string="Name" />
-                <filter domain="[('amdec_group_id','!=',False)]" name="amdec_group_id" string="Amdec Group" />
                 <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="Amdec" />
+                <filter domain="[('cause','!=',False)]" name="cause" string="Cause" />
+                <filter domain="[('composante_id','!=',False)]" name="composante_id" string="Composante" />
+                <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />
+                <filter
+                    domain="[('grille_occurence_id','!=',False)]"
+                    name="grille_occurence_id"
+                    string="Grille occurence"
+                />
+                <filter domain="[('detectabilite_id','!=',False)]" name="detectabilite_id" string="Detectabilite" />
+                <filter domain="[('effet','!=',False)]" name="effet" string="Effet" />
                 <filter domain="[('failure_mode_id','!=',False)]" name="failure_mode_id" string="Failure Mode" />
                 <filter
                     domain="[('historique_action_ids','!=',False)]"
                     name="historique_action_ids"
                     string="Historique Action"
                 />
+                <filter domain="[('inspection_ids','!=',False)]" name="inspection_ids" string="Inspections" />
                 <filter domain="[('is_seuil_superior','=',True)]" name="is_seuil_superior" string="Is Seuil Superior" />
-                <filter domain="[('rate','!=',False)]" name="rate" string="Rate" />
+                <filter domain="[('occurence','!=',False)]" name="occurence" string="Occurence" />
+                <filter domain="[('rpn','!=',False)]" name="rpn" string="Rpn" />
+                <filter domain="[('severite_id','!=',False)]" name="severite_id" string="Severite" />
                 <filter domain="[('system_id','!=',False)]" name="system_id" string="System" />
             </search>
         </field>
@@ -160,23 +226,29 @@
         <field name="name">amdec_line_tree</field>
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
-            <tree decoration-danger="is_seuil_superior">
-                <field name="name" />
-                <field name="amdec_group_id" />
+            <tree decoration-danger="is_seuil_superior" decoration-warning="not rpn">
+                <field name="sequence" widget="handle" />
+                <field name="id" />
                 <field name="amdec_id" />
-                <field name="failure_mode_id" />
-                <field name="historique_action_ids" />
-                <field name="is_seuil_superior" />
-                <field name="rate" />
                 <field name="system_id" />
+                <field name="composante_id" />
+                <field name="defaillance_id" />
+                <field name="cause" />
+                <field name="effet" />
+                <field name="action_entreprendre" />
+                <field name="occurence" />
+                <field name="detectabilite_id" />
+                <field name="severite_id" />
+                <field name="rpn" />
+                <field name="is_seuil_superior" invisible="True" />
             </tree>
         </field>
     </record>
 
     <act_window
         id="amdec_line_line_action_window"
-        name="Line"
+        name="Mode de défaillance"
         res_model="amdec.line"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

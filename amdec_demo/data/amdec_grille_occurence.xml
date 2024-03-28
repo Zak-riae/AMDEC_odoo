@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_grille_occurence_1" model="amdec.grille.occurence">
+            <field name="name">Jamais</field>
+            <field name="value" eval="1" />
+            <field name="frequence" eval="0" />
+        </record>
+        <record id="amdec_grille_occurence_2" model="amdec.grille.occurence">
+            <field name="name">Peu fréquent</field>
+            <field name="value" eval="2" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_grille_occurence_3" model="amdec.grille.occurence">
+            <field name="name">Bip</field>
+            <field name="value" eval="3" />
+            <field name="frequence" eval="4" />
+        </record>
+        <record id="amdec_grille_occurence_4" model="amdec.grille.occurence">
+            <field name="name">Moyennement fréquent</field>
+            <field name="value" eval="4" />
+            <field name="frequence" eval="6" />
+        </record>
+        <!--        <record id="amdec_grille_occurence_5" model="amdec.grille.occurence">-->
+        <!--            <field name="name">5</field>-->
+        <!--            <field name="value" eval="5" />-->
+        <!--        </record>-->
+        <!--        <record id="amdec_grille_occurence_6" model="amdec.grille.occurence">-->
+        <!--            <field name="name">6 - Effet critique, baisse de la performance</field>-->
+        <!--            <field name="value" eval="6" />-->
+        <!--        </record>-->
+        <record id="amdec_grille_occurence_7" model="amdec.grille.occurence">
+            <field name="name">Fréquent</field>
+            <field name="value" eval="7" />
+            <field name="frequence" eval="8" />
+        </record>
+        <record id="amdec_grille_occurence_8" model="amdec.grille.occurence">
+            <field name="name">Très fréquent</field>
+            <field name="value" eval="8" />
+            <field name="frequence" eval="10" />
+        </record>
+        <!--        <record id="amdec_grille_occurence_9" model="amdec.grille.occurence">-->
+        <!--            <field name="name">9</field>-->
+        <!--            <field name="value" eval="9" />-->
+        <!--        </record>-->
+        <record id="amdec_grille_occurence_10" model="amdec.grille.occurence">
+            <field name="name">Toujours ou systématiquement</field>
+            <field name="value" eval="10" />
+            <field name="frequence" eval="30" />
+        </record>
+    </data>
+</odoo>

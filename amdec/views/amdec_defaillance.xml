@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="amdec_system_view_form" model="ir.ui.view">
-        <field name="name">amdec_system_form</field>
-        <field name="model">amdec.system</field>
+    <record id="amdec_defaillance_view_form" model="ir.ui.view">
+        <field name="name">amdec_defaillance_form</field>
+        <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
@@ -10,31 +10,29 @@
                     <h1>
                         <field name="name" />
                     </h1>
-                    <notebook>
-                        <page string="Composante">
-                            <group>
-                                <field name="composante_ids" />
-                            </group>
-                        </page>
-                    </notebook>
+                    <group>
+                        <field name="cause" />
+                        <field name="effet" />
+                        <field name="action_entreprendre" />
+                    </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="amdec_system_view_graph" model="ir.ui.view">
-        <field name="name">amdec_system_graph</field>
-        <field name="model">amdec.system</field>
+    <record id="amdec_defaillance_view_graph" model="ir.ui.view">
+        <field name="name">amdec_defaillance_graph</field>
+        <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
-            <graph string="Amdec system">
+            <graph string="Amdec defaillance">
                 <field name="name" type="row" />
             </graph>
         </field>
     </record>
 
-    <record id="amdec_system_view_kanban" model="ir.ui.view">
-        <field name="name">amdec_system_kanban</field>
-        <field name="model">amdec.system</field>
+    <record id="amdec_defaillance_view_kanban" model="ir.ui.view">
+        <field name="name">amdec_defaillance_kanban</field>
+        <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile">
                 <field name="name" />
@@ -57,41 +55,43 @@
         </field>
     </record>
 
-    <record id="amdec_system_view_pivot" model="ir.ui.view">
-        <field name="name">amdec_system_pivot</field>
-        <field name="model">amdec.system</field>
+    <record id="amdec_defaillance_view_pivot" model="ir.ui.view">
+        <field name="name">amdec_defaillance_pivot</field>
+        <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec system">
+            <pivot string="Amdec defaillance">
                 <field name="name" type="row" />
             </pivot>
         </field>
     </record>
 
-    <record id="amdec_system_view_search" model="ir.ui.view">
-        <field name="name">amdec_system_search</field>
-        <field name="model">amdec.system</field>
+    <record id="amdec_defaillance_view_search" model="ir.ui.view">
+        <field name="name">amdec_defaillance_search</field>
+        <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
-            <search string="Amdec system">
+            <search string="Amdec defaillance">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
             </search>
         </field>
     </record>
 
-    <record id="amdec_system_view_tree" model="ir.ui.view">
-        <field name="name">amdec_system_tree</field>
-        <field name="model">amdec.system</field>
+    <record id="amdec_defaillance_view_tree" model="ir.ui.view">
+        <field name="name">amdec_defaillance_tree</field>
+        <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
-                <field name="composante_ids" widget="many2many_tags" />
+                <field name="cause" />
+                <field name="effet" />
+                <field name="action_entreprendre" />
             </tree>
         </field>
     </record>
 
     <act_window
-        id="amdec_system_system_action_window"
-        name="System"
-        res_model="amdec.system"
+        id="amdec_defaillance_defaillance_action_window"
+        name="Defaillance"
+        res_model="amdec.defaillance"
         view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

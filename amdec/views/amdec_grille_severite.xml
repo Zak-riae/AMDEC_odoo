@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="amdec_grille_severite_view_form" model="ir.ui.view">
+        <field name="name">amdec_grille_severite_form</field>
+        <field name="model">amdec.grille.severite</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <label for="name" class="oe_edit_only" />
+                    <h1>
+                        <field name="name" />
+                    </h1>
+                    <group>
+                        <field name="value" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="amdec_grille_severite_view_graph" model="ir.ui.view">
+        <field name="name">amdec_grille_severite_graph</field>
+        <field name="model">amdec.grille.severite</field>
+        <field name="arch" type="xml">
+            <graph string="Amdec grille severite">
+                <field name="name" type="row" />
+                <field name="value" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="amdec_grille_severite_view_kanban" model="ir.ui.view">
+        <field name="name">amdec_grille_severite_kanban</field>
+        <field name="model">amdec.grille.severite</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <field name="value" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="value" />
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="amdec_grille_severite_view_pivot" model="ir.ui.view">
+        <field name="name">amdec_grille_severite_pivot</field>
+        <field name="model">amdec.grille.severite</field>
+        <field name="arch" type="xml">
+            <pivot string="Amdec grille severite">
+                <field name="name" type="row" />
+                <field name="value" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="amdec_grille_severite_view_search" model="ir.ui.view">
+        <field name="name">amdec_grille_severite_search</field>
+        <field name="model">amdec.grille.severite</field>
+        <field name="arch" type="xml">
+            <search string="Amdec grille severite">
+                <filter domain="[('name','!=',False)]" name="name" string="Name" />
+                <filter domain="[('value','!=',False)]" name="value" string="Value" />
+            </search>
+        </field>
+    </record>
+
+    <record id="amdec_grille_severite_view_tree" model="ir.ui.view">
+        <field name="name">amdec_grille_severite_tree</field>
+        <field name="model">amdec.grille.severite</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="value" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="amdec_grille_severite_grille_severite_action_window"
+        name="Grille severite"
+        res_model="amdec.grille.severite"
+        view_mode="tree,kanban,pivot,graph,form"
+    />
+</odoo>

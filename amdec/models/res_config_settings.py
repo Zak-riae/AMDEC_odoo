@@ -4,7 +4,7 @@
 
 from odoo import api, fields, models
 
-DEFAULT_AMDEC_SEUIL = 0.1
+DEFAULT_GENERAL_AMDEC_SEUIL_RPN = 100
 
 
 class ResConfigSettings(models.TransientModel):
@@ -14,9 +14,9 @@ class ResConfigSettings(models.TransientModel):
     # Database
     # ----------------------------------------------------------
 
-    default_seuil = fields.Float(
-        default=DEFAULT_AMDEC_SEUIL,
-        default_model="amdec.composante",
+    default_general_amdec_seuil_rpn = fields.Integer(
+        default=DEFAULT_GENERAL_AMDEC_SEUIL_RPN,
+        default_model="amdec.project",
         string="Seuil de composante AMDEC par défaut",
         help="Default seuil for a AMDEC composante.",
     )
@@ -29,7 +29,10 @@ class ResConfigSettings(models.TransientModel):
     def set_values(self):
         res = super(ResConfigSettings, self).set_values()
         param = self.env["ir.config_parameter"].sudo()
-        param.set_param("amdec.default_seuil", self.default_seuil)
+        param.set_param(
+            "amdec.default_general_amdec_seuil_rpn",
+            self.default_general_amdec_seuil_rpn,
+        )
         return res
 
     @api.model
@@ -37,8 +40,11 @@ class ResConfigSettings(models.TransientModel):
         res = super(ResConfigSettings, self).get_values()
         params = self.env["ir.config_parameter"].sudo()
         res.update(
-            default_seuil=float(
-                params.get_param("amdec.default_seuil", DEFAULT_AMDEC_SEUIL)
+            default_general_amdec_seuil_rpn=int(
+                params.get_param(
+                    "amdec.default_general_amdec_seuil_rpn",
+                    DEFAULT_GENERAL_AMDEC_SEUIL_RPN,
+                )
             )
         )
         return res

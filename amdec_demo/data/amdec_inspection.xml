@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_inspection_001" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('04/03/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_inspection_002" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('08/10/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_inspection_003" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('04/11/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="4" />
+        </record>
+        <record id="amdec_inspection_004" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_2" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('04/03/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="3" />
+        </record>
+        <record id="amdec_inspection_005" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_2" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/08/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="1" />
+        </record>
+        <record id="amdec_inspection_006" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_4" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/04/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_inspection_007" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_4" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/10/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="1" />
+        </record>
+        <record id="amdec_inspection_008" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_3" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/03/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="5" />
+        </record>
+        <record id="amdec_inspection_009" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_3" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/09/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="3" />
+        </record>
+        <record id="amdec_inspection_010" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_5" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('07/08/2022', '%d/%m/%Y')" />
+            <field name="frequence" eval="1" />
+        </record>
+        <record id="amdec_inspection_011" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('04/03/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_inspection_012" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('08/10/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="21" />
+        </record>
+        <record id="amdec_inspection_013" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('04/11/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="49" />
+        </record>
+        <record id="amdec_inspection_014" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_2" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('04/03/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_inspection_015" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_2" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/08/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="6" />
+        </record>
+        <record id="amdec_inspection_016" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_4" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/04/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="15" />
+        </record>
+        <record id="amdec_inspection_017" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_4" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/10/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="8" />
+        </record>
+        <record id="amdec_inspection_018" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_3" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/03/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="2" />
+        </record>
+        <record id="amdec_inspection_019" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_3" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('18/09/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="7" />
+        </record>
+        <record id="amdec_inspection_020" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_5" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('07/08/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="4" />
+        </record>
+        <record id="amdec_inspection_021" model="amdec.inspection">
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_6" />
+            <field name="responsable_action_id" ref="base.partner_admin" />
+            <field name="date_action" eval="datetime.strptime('09/08/2023', '%d/%m/%Y')" />
+            <field name="frequence" eval="5" />
+        </record>
+    </data>
+</odoo>

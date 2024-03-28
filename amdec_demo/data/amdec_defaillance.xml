@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_defaillance_1" model="amdec.defaillance">
+            <field name="name">Usure prématuré</field>
+            <field name="cause">Montage déséquilibré</field>
+            <field name="effet">blockage</field>
+            <field name="action_entreprendre">Contrôler le montage</field>
+        </record>
+        <record id="amdec_defaillance_2" model="amdec.defaillance">
+            <field name="name">Déchirure</field>
+            <field name="cause">Vitesse haute</field>
+            <field name="effet">Arrêt</field>
+            <field name="action_entreprendre">Changer la roue</field>
+        </record>
+        <record id="amdec_defaillance_3" model="amdec.defaillance">
+            <field name="name">Poussière accumulée</field>
+            <field name="cause">Manque de ventilation</field>
+            <field name="effet">Diminution de la vitesse</field>
+            <field name="action_entreprendre">Dépoussiérer et installer un système d'aération</field>
+        </record>
+        <record id="amdec_defaillance_4" model="amdec.defaillance">
+            <field name="name">Bris intérieur</field>
+            <field name="cause">Poids dépassés</field>
+            <field name="effet">Déséquilibre</field>
+            <field name="action_entreprendre">Remplacer la pièce*</field>
+        </record>
+        <record id="amdec_defaillance_5" model="amdec.defaillance">
+            <field name="name">Rouille</field>
+            <field name="cause">Humidité</field>
+            <field name="effet">Déséquilibre</field>
+            <field name="action_entreprendre">Maintenance préventive</field>
+        </record>
+        <record id="amdec_defaillance_6" model="amdec.defaillance">
+            <field name="name">Bris : usure roulement à bille (tous les 1500000km soit tous les 450 000 000 de cycle de révolution environ)</field>
+            <field name="cause">Usage étendu</field>
+            <field name="effet">Destruction du roulement à bille</field>
+            <field name="action_entreprendre">Remplacer le pièce</field>
+        </record>
+    </data>
+</odoo>

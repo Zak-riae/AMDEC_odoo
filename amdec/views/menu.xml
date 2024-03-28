@@ -6,9 +6,13 @@
 
     <!--Sub menu-->
 
-    <menuitem id="menu" name="AMDEC" sequence="1" parent="amdec_root" />
+    <menuitem id="menu_amdec" name="AMDEC" sequence="1" parent="amdec_root" />
 
-    <menuitem id="configuration" name="Configuration" sequence="1" parent="amdec_root" />
+    <menuitem id="menu_intervention" name="Intervention" sequence="2" parent="amdec_root" />
+
+    <menuitem id="menu_config" name="Configuration" sequence="99" parent="amdec_root" />
+
+    <menuitem id="menu_system_root" name="Système" sequence="3" parent="amdec_root" />
 
     <!--Child menu-->
 
@@ -16,46 +20,58 @@
         id="action_historique"
         name="Action historique"
         action="amdec_action_historique_action_historique_action_window"
-        sequence="5"
-        parent="menu"
+        sequence="1"
+        parent="menu_intervention"
     />
 
-    <menuitem id="amdec" name="Amdec" action="amdec_amdec_amdec_action_window" sequence="1" parent="menu" />
+    <menuitem
+        id="action_inspection"
+        name="Inspection"
+        action="amdec_inspection_inspection_action_window"
+        sequence="2"
+        parent="menu_intervention"
+    />
+
+    <menuitem
+        id="amdec_project"
+        name="Projet"
+        action="amdec_project_project_action_window"
+        sequence="1"
+        parent="menu_amdec"
+    />
+
+    <menuitem id="amdec" name="AMDEC" action="amdec_amdec_amdec_action_window" sequence="2" parent="menu_amdec" />
 
     <menuitem
         id="composante"
         name="Composante"
         action="amdec_composante_composante_action_window"
-        sequence="4"
-        parent="menu"
+        sequence="3"
+        parent="menu_system_root"
     />
 
-    <menuitem id="group" name="Group" action="amdec_group_group_action_window" sequence="3" parent="menu" />
+    <menuitem
+        id="defaillance"
+        name="Défaillance"
+        action="amdec_defaillance_defaillance_action_window"
+        sequence="2"
+        parent="menu_config"
+    />
 
-    <menuitem id="line" name="Line" action="amdec_line_line_action_window" sequence="2" parent="menu" />
+    <menuitem
+        id="line"
+        name="Mode de défaillance"
+        action="amdec_line_line_action_window"
+        sequence="2"
+        parent="menu_amdec"
+    />
 
     <menuitem
         id="system"
-        name="System"
+        name="Système"
         action="amdec_system_system_action_window"
-        sequence="6"
-        parent="configuration"
-    />
-
-    <menuitem
-        id="panne_type"
-        name="Type panne"
-        action="amdec_panne_type_panne_type_action_window"
-        sequence="7"
-        parent="configuration"
-    />
-
-    <menuitem
-        id="reparation_type"
-        name="Type reparation"
-        action="amdec_reparation_type_reparation_type_action_window"
-        sequence="8"
-        parent="configuration"
+        sequence="4"
+        parent="menu_system_root"
     />
 
     <menuitem
@@ -63,6 +79,54 @@
         name="Configuration"
         action="amdec_config_settings_action"
         sequence="1"
-        parent="configuration"
+        parent="menu_config"
+    />
+
+    <menuitem
+        id="reparation_type"
+        name="Type reparation"
+        action="amdec_reparation_type_reparation_type_action_window"
+        sequence="2"
+        parent="menu_config"
+    />
+
+    <menuitem
+        id="panne_type"
+        name="Type panne"
+        action="amdec_panne_type_panne_type_action_window"
+        sequence="3"
+        parent="menu_config"
+    />
+
+    <menuitem
+        id="grille_occurence"
+        name="Grille occurence"
+        action="amdec_grille_occurence_grille_occurence_action_window"
+        sequence="4"
+        parent="menu_config"
+    />
+
+    <menuitem
+        id="grille_detectabilite"
+        name="Grille détectabilité"
+        action="amdec_grille_detectabilite_grille_detectabilite_action_window"
+        sequence="5"
+        parent="menu_config"
+    />
+
+    <menuitem
+        id="grille_severite"
+        name="Grille severite"
+        action="amdec_grille_severite_grille_severite_action_window"
+        sequence="6"
+        parent="menu_config"
+    />
+
+    <menuitem
+        id="periode"
+        name="Période"
+        action="amdec_period_period_action_window"
+        sequence="7"
+        parent="menu_config"
     />
 </odoo>

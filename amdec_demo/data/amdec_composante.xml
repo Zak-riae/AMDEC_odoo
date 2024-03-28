@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_composante_1" model="amdec.composante">
+            <field name="name">Roue</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_1" />
+        </record>
+        <record id="amdec_composante_2" model="amdec.composante">
+            <field name="name">Roulement à bille</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_2" />
+        </record>
+        <record id="amdec_composante_3" model="amdec.composante">
+            <field name="name">Engrenage</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_2" />
+        </record>
+    </data>
+</odoo>

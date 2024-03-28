@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_amdec_1" model="amdec.amdec">
+            <field name="name">AMDEC 2022</field>
+            <field name="amdec_project_id" ref="amdec_demo.amdec_project_1" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2022', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2022', '%d/%m/%Y')" />
+        </record>
+        <record id="amdec_amdec_2" model="amdec.amdec">
+            <field name="name">AMDEC 2023</field>
+            <field name="amdec_project_id" ref="amdec_demo.amdec_project_1" />
+            <field name="amdec_precedent_id" ref="amdec_amdec_1" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2023', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2023', '%d/%m/%Y')" />
+        </record>
+        <record id="amdec_amdec_3" model="amdec.amdec">
+            <field name="name">AMDEC 2024</field>
+            <field name="amdec_project_id" ref="amdec_demo.amdec_project_1" />
+            <field name="amdec_precedent_id" ref="amdec_amdec_2" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2024', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2024', '%d/%m/%Y')" />
+        </record>
+        <record id="amdec_amdec_4" model="amdec.amdec">
+            <field name="name">AMDEC 2022</field>
+            <field name="amdec_project_id" ref="amdec_demo.amdec_project_2" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2022', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2022', '%d/%m/%Y')" />
+        </record>
+        <record id="amdec_amdec_5" model="amdec.amdec">
+            <field name="name">AMDEC 2023</field>
+            <field name="amdec_project_id" ref="amdec_demo.amdec_project_2" />
+            <field name="amdec_precedent_id" ref="amdec_amdec_4" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2023', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2023', '%d/%m/%Y')" />
+        </record>
+        <record id="amdec_amdec_6" model="amdec.amdec">
+            <field name="name">AMDEC 2024</field>
+            <field name="amdec_project_id" ref="amdec_demo.amdec_project_2" />
+            <field name="amdec_precedent_id" ref="amdec_amdec_5" />
+            <field name="date_debut" eval="datetime.strptime('01/01/2024', '%d/%m/%Y')" />
+            <field name="date_fin" eval="datetime.strptime('31/12/2024', '%d/%m/%Y')" />
+        </record>
+    </data>
+</odoo>
