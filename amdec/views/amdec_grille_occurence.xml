@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="amdec_grille_occurence_view_form" model="ir.ui.view">
+        <field name="name">amdec_grille_occurence_form</field>
+        <field name="model">amdec.grille.occurence</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
+                            <field name="active" widget="boolean_button" />
+                        </button>
+                    </div>
+                    <label for="name" class="oe_edit_only" />
+                    <h1>
+                        <field name="name" />
+                    </h1>
+                    <group>
+                        <field name="period_id" />
+                        <field name="value" />
+                        <field name="frequence" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="amdec_grille_occurence_view_graph" model="ir.ui.view">
+        <field name="name">amdec_grille_occurence_graph</field>
+        <field name="model">amdec.grille.occurence</field>
+        <field name="arch" type="xml">
+            <graph string="Amdec grille occurence">
+                <field name="name" type="row" />
+                <field name="value" type="measure" />
+                <field name="frequence" type="measure" />
+                <field name="period_id" type="row" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="amdec_grille_occurence_view_kanban" model="ir.ui.view">
+        <field name="name">amdec_grille_occurence_kanban</field>
+        <field name="model">amdec.grille.occurence</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <field name="value" />
+                <field name="frequence" />
+                <field name="period_id" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="value" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="frequence" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="period_id" />
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="amdec_grille_occurence_view_pivot" model="ir.ui.view">
+        <field name="name">amdec_grille_occurence_pivot</field>
+        <field name="model">amdec.grille.occurence</field>
+        <field name="arch" type="xml">
+            <pivot string="Amdec grille occurence">
+                <field name="name" type="row" />
+                <field name="value" type="measure" />
+                <field name="frequence" type="measure" />
+                <field name="period_id" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="amdec_grille_occurence_view_search" model="ir.ui.view">
+        <field name="name">amdec_grille_occurence_search</field>
+        <field name="model">amdec.grille.occurence</field>
+        <field name="arch" type="xml">
+            <search string="Amdec grille occurence">
+                <filter domain="[('name','!=',False)]" name="name" string="Name" />
+                <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Amdec grille occurence" />
+                <filter domain="[('value','!=',False)]" name="value" string="Value" />
+                <filter domain="[('frequence','!=',False)]" name="frequence" string="Frequence" />
+                <filter domain="[('period_id','!=',False)]" name="period_id" string="P&#233;riode" />
+            </search>
+        </field>
+    </record>
+
+    <record id="amdec_grille_occurence_view_tree" model="ir.ui.view">
+        <field name="name">amdec_grille_occurence_tree</field>
+        <field name="model">amdec.grille.occurence</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="value" />
+                <field name="frequence" />
+                <field name="period_id" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="amdec_grille_occurence_grille_occurence_action_window"
+        name="Grille occurence"
+        res_model="amdec.grille.occurence"
+        view_mode="tree,kanban,pivot,graph,form"
+    />
+</odoo>

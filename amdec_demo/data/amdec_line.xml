@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_line_1" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_1" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_1" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_3" />
+        </record>
+        <record id="amdec_line_2" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_1" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_2" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_3" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_4" />
+        </record>
+        <record id="amdec_line_3" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_4" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_4" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_4" />
+        </record>
+        <record id="amdec_line_4" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_6" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_4" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_4" />
+        </record>
+        <record id="amdec_line_5" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_3" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_2" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_1" />
+        </record>
+        <record id="amdec_line_6" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_1" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_5" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_2" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_3" />
+        </record>
+        <record id="amdec_line_7" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_2" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_1" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_1" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_1" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_3" />
+        </record>
+        <record id="amdec_line_8" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_2" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_1" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_2" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_3" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_4" />
+        </record>
+        <record id="amdec_line_9" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_2" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_4" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_4" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_4" />
+        </record>
+        <record id="amdec_line_10" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_2" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_6" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_4" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_4" />
+        </record>
+        <record id="amdec_line_11" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_2" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_3" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_2" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_1" />
+        </record>
+        <record id="amdec_line_12" model="amdec.line">
+            <field name="amdec_id" ref="amdec_demo.amdec_amdec_2" />
+            <field name="composante_id" ref="amdec_demo.amdec_composante_2" />
+            <field name="defaillance_id" ref="amdec_demo.amdec_defaillance_5" />
+            <field name="detectabilite_id" ref="amdec_demo.amdec_grille_detectabilite_2" />
+            <field name="severite_id" ref="amdec_demo.amdec_grille_severite_3" />
+        </record>
+    </data>
+</odoo>

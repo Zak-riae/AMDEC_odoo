@@ -6,9 +6,10 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
-                    <group>
+                    <label for="name" class="oe_edit_only" />
+                    <h1>
                         <field name="name" />
-                    </group>
+                    </h1>
                 </sheet>
             </form>
         </field>
@@ -83,6 +84,6 @@
         id="amdec_reparation_type_reparation_type_action_window"
         name="Reparation type"
         res_model="amdec.reparation.type"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

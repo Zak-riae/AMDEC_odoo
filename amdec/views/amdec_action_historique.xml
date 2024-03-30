@@ -6,25 +6,20 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
-                    <group>
+                    <label for="name" class="oe_edit_only" />
+                    <h1>
                         <field name="name" />
-                    </group>
+                    </h1>
+                    <group />
                     <group>
+                        <field name="date_action" />
+                        <field name="defaillance_id" />
+                        <field name="responsable_action_id" />
                         <field name="action_corrige_panne" />
-                    </group>
-                    <group>
                         <field name="action_realise" />
-                    </group>
-                    <group>
                         <field name="action_reparation" />
-                    </group>
-                    <group>
                         <field name="composante_id" />
-                    </group>
-                    <group>
                         <field name="system_id" />
-                    </group>
-                    <group>
                         <field name="type_panne_id" />
                     </group>
                 </sheet>
@@ -42,6 +37,9 @@
                 <field name="action_realise" type="row" />
                 <field name="action_reparation" type="row" />
                 <field name="composante_id" type="row" />
+                <field name="date_action" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="responsable_action_id" type="row" />
                 <field name="system_id" type="row" />
                 <field name="type_panne_id" type="row" />
             </graph>
@@ -58,6 +56,9 @@
                 <field name="action_realise" />
                 <field name="action_reparation" />
                 <field name="composante_id" />
+                <field name="date_action" />
+                <field name="defaillance_id" />
+                <field name="responsable_action_id" />
                 <field name="system_id" />
                 <field name="type_panne_id" />
                 <templates>
@@ -100,6 +101,21 @@
                                     </li>
                                     <li class="mb4">
                                         <strong>
+                                            <field name="date_action" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="defaillance_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="responsable_action_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
                                             <field name="system_id" />
                                         </strong>
                                     </li>
@@ -127,6 +143,9 @@
                 <field name="action_realise" type="row" />
                 <field name="action_reparation" type="row" />
                 <field name="composante_id" type="row" />
+                <field name="date_action" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="responsable_action_id" type="row" />
                 <field name="system_id" type="row" />
                 <field name="type_panne_id" type="row" />
             </pivot>
@@ -142,17 +161,28 @@
                 <filter
                     domain="[('action_corrige_panne','=',True)]"
                     name="action_corrige_panne"
-                    string="Action Corrige Panne"
+                    string="L'action a corrig&#233; la panne"
                 />
-                <filter domain="[('action_realise','=',True)]" name="action_realise" string="Action Realise" />
+                <filter
+                    domain="[('action_realise','=',True)]"
+                    name="action_realise"
+                    string="L'action a &#233;t&#233; r&#233;alis&#233;"
+                />
                 <filter
                     domain="[('action_reparation','!=',False)]"
                     name="action_reparation"
-                    string="Action Reparation"
+                    string="Type r&#233;paration"
                 />
                 <filter domain="[('composante_id','!=',False)]" name="composante_id" string="Composante" />
-                <filter domain="[('system_id','!=',False)]" name="system_id" string="System" />
-                <filter domain="[('type_panne_id','!=',False)]" name="type_panne_id" string="Type Panne" />
+                <filter domain="[('date_action','!=',False)]" name="date_action" string="Date Action" />
+                <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />
+                <filter
+                    domain="[('responsable_action_id','!=',False)]"
+                    name="responsable_action_id"
+                    string="Responsable"
+                />
+                <filter domain="[('system_id','!=',False)]" name="system_id" string="Syst&#232;me" />
+                <filter domain="[('type_panne_id','!=',False)]" name="type_panne_id" string="Type panne" />
             </search>
         </field>
     </record>
@@ -163,6 +193,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="date_action" />
+                <field name="defaillance_id" />
+                <field name="responsable_action_id" />
                 <field name="action_corrige_panne" />
                 <field name="action_realise" />
                 <field name="action_reparation" />
@@ -177,6 +210,6 @@
         id="amdec_action_historique_action_historique_action_window"
         name="Action historique"
         res_model="amdec.action.historique"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

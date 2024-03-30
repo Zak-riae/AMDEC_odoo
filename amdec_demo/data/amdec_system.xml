@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_system_1" model="amdec.system">
+            <field name="name">Système principal</field>
+        </record>
+        <record id="amdec_system_2" model="amdec.system">
+            <field name="name">Système secondaire</field>
+        </record>
+    </data>
+</odoo>

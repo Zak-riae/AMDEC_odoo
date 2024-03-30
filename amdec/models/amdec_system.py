@@ -6,3 +6,9 @@ class AmdecSystem(models.Model):
     _description = "amdec_system"
 
     name = fields.Char()
+
+    composante_ids = fields.One2many(
+        comodel_name="amdec.composante",
+        inverse_name="system_id",
+        string="Composantes",
+    )

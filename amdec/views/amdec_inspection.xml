@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="amdec_inspection_view_form" model="ir.ui.view">
+        <field name="name">amdec_inspection_form</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <label for="name" class="oe_edit_only" />
+                    <h1>
+                        <field name="name" />
+                    </h1>
+                    <group>
+                        <field name="defaillance_id" />
+                        <field name="responsable_action_id" />
+                        <field name="date_action" />
+                        <field name="frequence" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_graph" model="ir.ui.view">
+        <field name="name">amdec_inspection_graph</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <graph string="Amdec inspection">
+                <field name="name" type="row" />
+                <field name="date_action" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="frequence" type="measure" />
+                <field name="responsable_action_id" type="row" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_kanban" model="ir.ui.view">
+        <field name="name">amdec_inspection_kanban</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <field name="date_action" />
+                <field name="defaillance_id" />
+                <field name="frequence" />
+                <field name="responsable_action_id" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="date_action" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="defaillance_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="frequence" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="responsable_action_id" />
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_pivot" model="ir.ui.view">
+        <field name="name">amdec_inspection_pivot</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <pivot string="Amdec inspection">
+                <field name="name" type="row" />
+                <field name="date_action" type="row" />
+                <field name="defaillance_id" type="row" />
+                <field name="frequence" type="measure" />
+                <field name="responsable_action_id" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_search" model="ir.ui.view">
+        <field name="name">amdec_inspection_search</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <search string="Amdec inspection">
+                <filter domain="[('name','!=',False)]" name="name" string="Name" />
+                <filter domain="[('date_action','!=',False)]" name="date_action" string="Date Action" />
+                <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />
+                <filter domain="[('frequence','!=',False)]" name="frequence" string="Frequence" />
+                <filter
+                    domain="[('responsable_action_id','!=',False)]"
+                    name="responsable_action_id"
+                    string="Responsable"
+                />
+
+                <field name="name" />
+                <field name="date_action" />
+                <field name="frequence" />
+                <filter name="active" string="Active" domain="[('active','=',True)]" help="Show active" />
+                <filter name="inactive" string="Inactive" domain="[('active','=',False)]" help="Show inactive" />
+                <group string="Group By" expand="1">
+                    <filter
+                        name="group_by_defaillance_id"
+                        string="Defaillance"
+                        context="{'group_by':'defaillance_id'}"
+                    />
+                    <filter
+                        name="group_by_responsable_action_id"
+                        string="Responsable"
+                        context="{'group_by':'responsable_action_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="amdec_inspection_view_tree" model="ir.ui.view">
+        <field name="name">amdec_inspection_tree</field>
+        <field name="model">amdec.inspection</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date_action" />
+                <field name="defaillance_id" />
+                <field name="frequence" sum="Total fréquence" string="Fréquence" />
+                <field name="responsable_action_id" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="amdec_inspection_inspection_action_window"
+        name="Inspection"
+        res_model="amdec.inspection"
+        view_mode="tree,kanban,pivot,graph,form"
+    />
+</odoo>

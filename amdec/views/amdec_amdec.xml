@@ -6,22 +6,45 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <header>
-                    <button name="action_execute_algo_1" string="Execute algo 1" type="object" class="oe_highlight" />
-                    <button name="action_execute_algo_2" string="Execute algo 2" type="object" class="oe_highlight" />
+                    <button
+                        name="action_update_occurence"
+                        string="Mise à jour des occurences"
+                        type="object"
+                        class="btn-success"
+                        attrs="{'invisible':[('has_missing_data','=',True)]}"
+                    />
+                    <button
+                        name="action_update_occurence"
+                        string="Mise à jour des occurences"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':[('has_missing_data','=',False)]}"
+                    />
+                    <!--                    <button name="action_execute_algo_2" string="Execute algo 2" type="object" class="oe_highlight" />-->
+                    <button
+                        name="action_clear_occ_lines"
+                        string="Effacer algorithme"
+                        type="object"
+                        class="btn-warning"
+                    />
                 </header>
                 <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
                     <group>
-                        <field name="name" />
-                    </group>
-                    <group>
+                        <field name="has_missing_data" invisible="True" />
+                        <field name="amdec_project_id" />
                         <field name="amdec_precedent_id" />
                     </group>
-                    <group>
-                        <field name="amdec_group_ids" />
-                    </group>
-                    <group>
-                        <field name="amdec_line_ids" />
-                    </group>
+                    <notebook>
+                        <page string="Modes de défaillance">
+                            <field name="amdec_line_ids" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -33,7 +56,8 @@
         <field name="arch" type="xml">
             <graph string="Amdec amdec">
                 <field name="name" type="row" />
-                <field name="amdec_precedent_id" type="measure" />
+                <field name="amdec_precedent_id" type="row" />
+                <field name="amdec_project_id" type="row" />
             </graph>
         </field>
     </record>
@@ -45,6 +69,8 @@
             <kanban class="o_kanban_mobile">
                 <field name="name" />
                 <field name="amdec_precedent_id" />
+                <field name="amdec_project_id" />
+                <field name="amdec_line_ids" />
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
@@ -58,6 +84,16 @@
                                     <li class="mb4">
                                         <strong>
                                             <field name="amdec_precedent_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="amdec_project_id" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="amdec_line_ids" />
                                         </strong>
                                     </li>
                                 </ul>
@@ -75,7 +111,8 @@
         <field name="arch" type="xml">
             <pivot string="Amdec amdec">
                 <field name="name" type="row" />
-                <field name="amdec_precedent_id" type="measure" />
+                <field name="amdec_precedent_id" type="row" />
+                <field name="amdec_project_id" type="row" />
             </pivot>
         </field>
     </record>
@@ -89,8 +126,10 @@
                 <filter
                     domain="[('amdec_precedent_id','!=',False)]"
                     name="amdec_precedent_id"
-                    string="Amdec Precedent"
+                    string="AMDEC pr&#233;c&#233;dent"
                 />
+                <filter domain="[('amdec_project_id','!=',False)]" name="amdec_project_id" string="Project" />
+                <filter domain="[('amdec_line_ids','!=',False)]" name="amdec_line_ids" string="Modes de défaillance" />
             </search>
         </field>
     </record>
@@ -101,7 +140,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="amdec_project_id" />
                 <field name="amdec_precedent_id" />
+                <field name="amdec_line_ids" widget="many2many_tags" />
             </tree>
         </field>
     </record>
@@ -110,6 +151,6 @@
         id="amdec_amdec_amdec_action_window"
         name="Amdec"
         res_model="amdec.amdec"
-        view_mode="kanban,tree,pivot,graph,form"
+        view_mode="tree,kanban,pivot,graph,form"
     />
 </odoo>

@@ -13,10 +13,10 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane" />
                             <div class="o_setting_right_pane">
-                                <label for="default_seuil" />
+                                <label for="default_general_amdec_seuil_rpn" />
                                 <div class="text-muted">Va affecter les seuils de défaillance des nouveaux AMDEC</div>
                                 <div class="mt8">
-                                    <field name="default_seuil" class="o_light_label" />
+                                    <field name="default_general_amdec_seuil_rpn" class="o_light_label" />
                                 </div>
                             </div>
                         </div>
