@@ -23,7 +23,7 @@
         <field name="name">amdec_period_graph</field>
         <field name="model">amdec.period</field>
         <field name="arch" type="xml">
-            <graph string="Amdec period">
+            <graph string="AMDEC period">
                 <field name="name" type="row" />
                 <field name="date_debut" type="row" />
                 <field name="date_fin" type="row" />
@@ -72,7 +72,7 @@
         <field name="name">amdec_period_pivot</field>
         <field name="model">amdec.period</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec period">
+            <pivot string="AMDEC period">
                 <field name="name" type="row" />
                 <field name="date_debut" type="row" />
                 <field name="date_fin" type="row" />
@@ -84,7 +84,7 @@
         <field name="name">amdec_period_search</field>
         <field name="model">amdec.period</field>
         <field name="arch" type="xml">
-            <search string="Amdec period">
+            <search string="AMDEC period">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('date_debut','!=',False)]" name="date_debut" string="Date Debut" />
                 <filter domain="[('date_fin','!=',False)]" name="date_fin" string="Date Fin" />

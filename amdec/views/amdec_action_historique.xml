@@ -31,7 +31,7 @@
         <field name="name">amdec_action_historique_graph</field>
         <field name="model">amdec.action.historique</field>
         <field name="arch" type="xml">
-            <graph string="Amdec action historique">
+            <graph string="AMDEC action historique">
                 <field name="name" type="row" />
                 <field name="action_corrige_panne" type="row" />
                 <field name="action_realise" type="row" />
@@ -137,7 +137,7 @@
         <field name="name">amdec_action_historique_pivot</field>
         <field name="model">amdec.action.historique</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec action historique">
+            <pivot string="AMDEC action historique">
                 <field name="name" type="row" />
                 <field name="action_corrige_panne" type="row" />
                 <field name="action_realise" type="row" />
@@ -156,7 +156,7 @@
         <field name="name">amdec_action_historique_search</field>
         <field name="model">amdec.action.historique</field>
         <field name="arch" type="xml">
-            <search string="Amdec action historique">
+            <search string="AMDEC action historique">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter
                     domain="[('action_corrige_panne','=',True)]"

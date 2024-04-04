@@ -22,7 +22,7 @@
         <field name="name">amdec_grille_detectabilite_graph</field>
         <field name="model">amdec.grille.detectabilite</field>
         <field name="arch" type="xml">
-            <graph string="Amdec grille detectabilite">
+            <graph string="AMDEC grille detectabilite">
                 <field name="name" type="row" />
                 <field name="value" type="measure" />
             </graph>
@@ -64,7 +64,7 @@
         <field name="name">amdec_grille_detectabilite_pivot</field>
         <field name="model">amdec.grille.detectabilite</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec grille detectabilite">
+            <pivot string="AMDEC grille detectabilite">
                 <field name="name" type="row" />
                 <field name="value" type="measure" />
             </pivot>
@@ -75,7 +75,7 @@
         <field name="name">amdec_grille_detectabilite_search</field>
         <field name="model">amdec.grille.detectabilite</field>
         <field name="arch" type="xml">
-            <search string="Amdec grille detectabilite">
+            <search string="AMDEC grille detectabilite">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('value','!=',False)]" name="value" string="Value" />
             </search>

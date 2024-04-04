@@ -24,7 +24,7 @@
         <field name="name">amdec_defaillance_graph</field>
         <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
-            <graph string="Amdec defaillance">
+            <graph string="AMDEC defaillance">
                 <field name="name" type="row" />
             </graph>
         </field>
@@ -59,7 +59,7 @@
         <field name="name">amdec_defaillance_pivot</field>
         <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec defaillance">
+            <pivot string="AMDEC defaillance">
                 <field name="name" type="row" />
             </pivot>
         </field>
@@ -69,7 +69,7 @@
         <field name="name">amdec_defaillance_search</field>
         <field name="model">amdec.defaillance</field>
         <field name="arch" type="xml">
-            <search string="Amdec defaillance">
+            <search string="AMDEC defaillance">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
             </search>
         </field>

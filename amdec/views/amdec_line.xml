@@ -48,7 +48,7 @@
         <field name="name">amdec_line_graph</field>
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
-            <graph string="Amdec line">
+            <graph string="AMDEC line">
                 <field name="amdec_id" type="row" />
                 <field name="cause" type="row" />
                 <field name="composante_id" type="row" />
@@ -173,7 +173,7 @@
         <field name="name">amdec_line_pivot</field>
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec line">
+            <pivot string="AMDEC line">
                 <field name="amdec_id" type="row" />
                 <field name="cause" type="row" />
                 <field name="composante_id" type="row" />
@@ -194,8 +194,8 @@
         <field name="name">amdec_line_search</field>
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
-            <search string="Amdec line">
-                <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="Amdec" />
+            <search string="AMDEC line">
+                <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="AMDEC" />
                 <filter domain="[('cause','!=',False)]" name="cause" string="Cause" />
                 <filter domain="[('composante_id','!=',False)]" name="composante_id" string="Composante" />
                 <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />

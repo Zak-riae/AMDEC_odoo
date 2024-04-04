@@ -19,7 +19,7 @@
         <field name="name">amdec_panne_type_graph</field>
         <field name="model">amdec.panne.type</field>
         <field name="arch" type="xml">
-            <graph string="Amdec panne type">
+            <graph string="AMDEC panne type">
                 <field name="name" type="row" />
             </graph>
         </field>
@@ -54,7 +54,7 @@
         <field name="name">amdec_panne_type_pivot</field>
         <field name="model">amdec.panne.type</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec panne type">
+            <pivot string="AMDEC panne type">
                 <field name="name" type="row" />
             </pivot>
         </field>
@@ -64,7 +64,7 @@
         <field name="name">amdec_panne_type_search</field>
         <field name="model">amdec.panne.type</field>
         <field name="arch" type="xml">
-            <search string="Amdec panne type">
+            <search string="AMDEC panne type">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
             </search>
         </field>

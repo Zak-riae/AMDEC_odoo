@@ -26,7 +26,7 @@
         <field name="name">amdec_system_graph</field>
         <field name="model">amdec.system</field>
         <field name="arch" type="xml">
-            <graph string="Amdec system">
+            <graph string="AMDEC system">
                 <field name="name" type="row" />
             </graph>
         </field>
@@ -61,7 +61,7 @@
         <field name="name">amdec_system_pivot</field>
         <field name="model">amdec.system</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec system">
+            <pivot string="AMDEC system">
                 <field name="name" type="row" />
             </pivot>
         </field>
@@ -71,7 +71,7 @@
         <field name="name">amdec_system_search</field>
         <field name="model">amdec.system</field>
         <field name="arch" type="xml">
-            <search string="Amdec system">
+            <search string="AMDEC system">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
             </search>
         </field>

@@ -29,7 +29,7 @@
         <field name="name">amdec_grille_occurence_graph</field>
         <field name="model">amdec.grille.occurence</field>
         <field name="arch" type="xml">
-            <graph string="Amdec grille occurence">
+            <graph string="AMDEC grille occurence">
                 <field name="name" type="row" />
                 <field name="value" type="measure" />
                 <field name="frequence" type="measure" />
@@ -85,7 +85,7 @@
         <field name="name">amdec_grille_occurence_pivot</field>
         <field name="model">amdec.grille.occurence</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec grille occurence">
+            <pivot string="AMDEC grille occurence">
                 <field name="name" type="row" />
                 <field name="value" type="measure" />
                 <field name="frequence" type="measure" />
@@ -98,7 +98,7 @@
         <field name="name">amdec_grille_occurence_search</field>
         <field name="model">amdec.grille.occurence</field>
         <field name="arch" type="xml">
-            <search string="Amdec grille occurence">
+            <search string="AMDEC grille occurence">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Amdec grille occurence" />
                 <filter domain="[('value','!=',False)]" name="value" string="Value" />

@@ -27,7 +27,7 @@
         <field name="name">amdec_composante_graph</field>
         <field name="model">amdec.composante</field>
         <field name="arch" type="xml">
-            <graph string="Amdec composante">
+            <graph string="AMDEC composante">
                 <field name="name" type="row" />
                 <field name="system_id" type="row" />
             </graph>
@@ -75,7 +75,7 @@
         <field name="name">amdec_composante_pivot</field>
         <field name="model">amdec.composante</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec composante">
+            <pivot string="AMDEC composante">
                 <field name="name" type="row" />
                 <field name="system_id" type="row" />
             </pivot>
@@ -86,7 +86,7 @@
         <field name="name">amdec_composante_search</field>
         <field name="model">amdec.composante</field>
         <field name="arch" type="xml">
-            <search string="Amdec composante">
+            <search string="AMDEC composante">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('system_id','!=',False)]" name="system_id" string="Syst&#232;me" />
                 <filter domain="[('amdec_line_ids','!=',False)]" name="amdec_line_ids" string="Modes de défaillance" />

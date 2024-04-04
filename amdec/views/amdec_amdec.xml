@@ -54,7 +54,7 @@
         <field name="name">amdec_amdec_graph</field>
         <field name="model">amdec.amdec</field>
         <field name="arch" type="xml">
-            <graph string="Amdec amdec">
+            <graph string="AMDEC amdec">
                 <field name="name" type="row" />
                 <field name="amdec_precedent_id" type="row" />
                 <field name="amdec_project_id" type="row" />
@@ -109,7 +109,7 @@
         <field name="name">amdec_amdec_pivot</field>
         <field name="model">amdec.amdec</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec amdec">
+            <pivot string="AMDEC amdec">
                 <field name="name" type="row" />
                 <field name="amdec_precedent_id" type="row" />
                 <field name="amdec_project_id" type="row" />
@@ -121,7 +121,7 @@
         <field name="name">amdec_amdec_search</field>
         <field name="model">amdec.amdec</field>
         <field name="arch" type="xml">
-            <search string="Amdec amdec">
+            <search string="AMDEC">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter
                     domain="[('amdec_precedent_id','!=',False)]"
@@ -149,7 +149,7 @@
 
     <act_window
         id="amdec_amdec_amdec_action_window"
-        name="Amdec"
+        name="AMDEC"
         res_model="amdec.amdec"
         view_mode="tree,kanban,pivot,graph,form"
     />

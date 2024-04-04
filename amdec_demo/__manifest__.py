@@ -1,5 +1,5 @@
 {
-    "name": "Amdec DEMO",
+    "name": "AMDEC DEMO",
     "category": "Uncategorized",
     "version": "12.0.1.0",
     "author": "TechnoLibre",

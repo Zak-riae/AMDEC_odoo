@@ -47,7 +47,7 @@
         <field name="name">amdec_project_graph</field>
         <field name="model">amdec.project</field>
         <field name="arch" type="xml">
-            <graph string="Amdec project">
+            <graph string="AMDEC project">
                 <field name="name" type="row" />
                 <field name="general_amdec_seuil_rpn" type="measure" />
             </graph>
@@ -107,7 +107,7 @@
         <field name="name">amdec_project_pivot</field>
         <field name="model">amdec.project</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec project">
+            <pivot string="AMDEC project">
                 <field name="name" type="row" />
                 <field name="general_amdec_seuil_rpn" type="measure" />
             </pivot>
@@ -118,7 +118,7 @@
         <field name="name">amdec_project_search</field>
         <field name="model">amdec.project</field>
         <field name="arch" type="xml">
-            <search string="Amdec project">
+            <search string="AMDEC project">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter
                     domain="[('general_amdec_seuil_rpn','!=',False)]"

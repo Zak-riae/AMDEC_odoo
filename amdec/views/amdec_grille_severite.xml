@@ -22,7 +22,7 @@
         <field name="name">amdec_grille_severite_graph</field>
         <field name="model">amdec.grille.severite</field>
         <field name="arch" type="xml">
-            <graph string="Amdec grille severite">
+            <graph string="AMDEC grille severite">
                 <field name="name" type="row" />
                 <field name="value" type="measure" />
             </graph>
@@ -64,7 +64,7 @@
         <field name="name">amdec_grille_severite_pivot</field>
         <field name="model">amdec.grille.severite</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec grille severite">
+            <pivot string="AMDEC grille severite">
                 <field name="name" type="row" />
                 <field name="value" type="measure" />
             </pivot>
@@ -75,7 +75,7 @@
         <field name="name">amdec_grille_severite_search</field>
         <field name="model">amdec.grille.severite</field>
         <field name="arch" type="xml">
-            <search string="Amdec grille severite">
+            <search string="AMDEC grille severite">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('value','!=',False)]" name="value" string="Value" />
             </search>

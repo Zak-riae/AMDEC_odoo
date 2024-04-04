@@ -25,7 +25,7 @@
         <field name="name">amdec_inspection_graph</field>
         <field name="model">amdec.inspection</field>
         <field name="arch" type="xml">
-            <graph string="Amdec inspection">
+            <graph string="AMDEC inspection">
                 <field name="name" type="row" />
                 <field name="date_action" type="row" />
                 <field name="defaillance_id" type="row" />
@@ -88,7 +88,7 @@
         <field name="name">amdec_inspection_pivot</field>
         <field name="model">amdec.inspection</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec inspection">
+            <pivot string="AMDEC inspection">
                 <field name="name" type="row" />
                 <field name="date_action" type="row" />
                 <field name="defaillance_id" type="row" />
@@ -102,7 +102,7 @@
         <field name="name">amdec_inspection_search</field>
         <field name="model">amdec.inspection</field>
         <field name="arch" type="xml">
-            <search string="Amdec inspection">
+            <search string="AMDEC inspection">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('date_action','!=',False)]" name="date_action" string="Date Action" />
                 <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />

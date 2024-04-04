@@ -9,7 +9,7 @@ class AmdecLine(models.Model):
 
     amdec_id = fields.Many2one(
         comodel_name="amdec.amdec",
-        string="Amdec",
+        string="AMDEC",
     )
 
     defaillance_id = fields.Many2one(

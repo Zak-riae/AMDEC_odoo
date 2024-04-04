@@ -19,7 +19,7 @@
         <field name="name">amdec_reparation_type_graph</field>
         <field name="model">amdec.reparation.type</field>
         <field name="arch" type="xml">
-            <graph string="Amdec reparation type">
+            <graph string="AMDEC reparation type">
                 <field name="name" type="row" />
             </graph>
         </field>
@@ -54,7 +54,7 @@
         <field name="name">amdec_reparation_type_pivot</field>
         <field name="model">amdec.reparation.type</field>
         <field name="arch" type="xml">
-            <pivot string="Amdec reparation type">
+            <pivot string="AMDEC reparation type">
                 <field name="name" type="row" />
             </pivot>
         </field>
@@ -64,7 +64,7 @@
         <field name="name">amdec_reparation_type_search</field>
         <field name="model">amdec.reparation.type</field>
         <field name="arch" type="xml">
-            <search string="Amdec reparation type">
+            <search string="AMDEC reparation type">
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
             </search>
         </field>
