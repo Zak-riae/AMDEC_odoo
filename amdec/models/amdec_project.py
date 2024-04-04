@@ -29,6 +29,11 @@ class AmdecProject(models.Model):
         default=100,
     )
 
+    description = fields.Text(
+        string="Périmètre d'étude",
+        help="Quel est la portée de ce projet d'AMDEC.",
+    )
+
     @api.multi
     def action_update_all_occurence(self):
         self.ensure_one()

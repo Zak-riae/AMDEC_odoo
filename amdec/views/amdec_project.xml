@@ -20,6 +20,7 @@
                     </h1>
                     <group>
                         <field name="general_amdec_seuil_rpn" />
+                        <field name="description" />
                     </group>
                     <notebook>
                         <page string="AMDEC">
