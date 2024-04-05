@@ -26,6 +26,11 @@
                                 <field name="inspection_ids" />
                             </group>
                         </page>
+                        <page string="Composantes">
+                            <group>
+                                <field name="composantes_ids" />
+                            </group>
+                        </page>
                         <page string="Actions historique">
                             <group>
                                 <field name="action_historique_ids" />
@@ -101,6 +106,7 @@
                 <field name="cause" />
                 <field name="effet" />
                 <field name="action_entreprendre" />
+                <field name="composantes_ids" widget="many2many_tags" />
             </tree>
         </field>
     </record>

@@ -17,3 +17,8 @@ class AmdecComposante(models.Model):
         inverse_name="composante_id",
         string="Modes de défaillance",
     )
+
+    defaillance_ids = fields.Many2many(
+        comodel_name="amdec.defaillance",
+        relation="amdec_composante_defaillance_rel",
+    )
