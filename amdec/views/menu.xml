@@ -38,11 +38,11 @@
         id="amdec_project"
         name="Projet"
         action="amdec_project_project_action_window"
-        sequence="2"
+        sequence="3"
         parent="menu_amdec"
     />
 
-    <menuitem id="amdec" name="AMDEC" action="amdec_amdec_amdec_action_window" sequence="1" parent="menu_amdec" />
+    <menuitem id="amdec" name="AMDEC" action="amdec_amdec_amdec_action_window" sequence="2" parent="menu_amdec" />
 
     <menuitem
         id="composante"
@@ -62,9 +62,9 @@
 
     <menuitem
         id="line"
-        name="Mode de défaillance"
-        action="amdec_line_line_action_window"
-        sequence="2"
+        name="AMDEC line"
+        action="amdec_line_line_group_default_action_window"
+        sequence="1"
         parent="menu_amdec"
     />
 

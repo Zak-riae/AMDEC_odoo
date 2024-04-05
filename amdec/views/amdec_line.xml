@@ -248,8 +248,16 @@
 
     <act_window
         id="amdec_line_line_action_window"
-        name="Mode de défaillance"
+        name="AMDEC line"
         res_model="amdec.line"
         view_mode="tree,kanban,pivot,graph,form"
+    />
+
+    <act_window
+        id="amdec_line_line_group_default_action_window"
+        name="AMDEC line"
+        res_model="amdec.line"
+        view_mode="tree,kanban,pivot,graph,form"
+        context="{'search_default_amdec_id': True,'search_default_system_id': True,'search_default_composante_id': True}"
     />
 </odoo>
