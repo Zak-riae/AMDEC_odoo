@@ -1,0 +1,17 @@
+id_system,id_composante,Composante
+Syteme1,Syteme1_1,Bras robotisé
+Syteme1,Syteme1_2,Système de vision
+Syteme1,Syteme1_3,Unité de contrôle
+Syteme1,Syteme1_4,Plateforme de transport
+Syteme2,Syteme2_1,Cabine de peinture
+Syteme2,Syteme2_2,Pistolet de peinture
+Syteme2,Syteme2_3,Système de séchage
+Syteme2,Syteme2_4,Convoyeurs d'entrée/sortie
+Syteme3,Syteme3_1,Banc de test
+Syteme3,Syteme3_2,Capteurs de mesure
+Syteme3,Syteme3_3,"Logiciel de test	"
+Syteme3,Syteme3_4,Système de reporting
+Syteme4,Syteme4_1,Convoyeur
+Syteme4,Syteme4_2,Système de tri
+Syteme4,Syteme4_3,Transpalettes électriques
+Syteme4,Syteme4_4,Logiciel de gestion logistique

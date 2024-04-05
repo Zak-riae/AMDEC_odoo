@@ -1,0 +1,38 @@
+Date,id_system,id_composante,Defaillance
+1/15/2023,Syteme1,Syteme1_1,Perte de précision
+3/22/2023,Syteme1,Syteme1_1,Perte de précision
+6/30/2023,Syteme1,Syteme1_1,Usure mécanique
+2/10/2023,Syteme1,Syteme1_2,Défaillance de lecture
+4/17/2023,Syteme1,Syteme1_2,Poussière/obstruction
+7/25/2023,Syteme1,Syteme1_2,Poussière/obstruction
+5/5/2023,Syteme1,Syteme1_3,Défaillance logicielle
+8/15/2023,Syteme1,Syteme1_3,Défaillance logicielle
+2/20/2023,Syteme1,Syteme1_4,Arrêt inopiné
+5/18/2023,Syteme1,Syteme1_4, Arrêt inopiné
+9/10/2023,Syteme1,Syteme1_4,Panne électrique
+3/1/2023,Syteme2,Syteme2_1,Variation de teinte
+7/14/2023,Syteme2,Syteme2_1, Mauvais réglage
+4/11/2023,Syteme2,Syteme2_2,Obstruction
+5/20/2023,Syteme2,Syteme2_2,Obstruction
+8/3/2023,Syteme2,Syteme2_2,Résidus de peinture
+3/22/2023,Syteme2,Syteme2_3,Séchage inégal
+9/7/2023,Syteme2,Syteme2_3, Température variable
+2/28/2023,Syteme2,Syteme2_4,Arrêt inopiné
+6/19/2023,Syteme2,Syteme2_4,Arrêt inopiné
+1/10/2023,Syteme3,Syteme3_1,Faux positifs/négatifs
+4/29/2023,Syteme3,Syteme3_1, Calibration inadéquate
+3/15/2023,Syteme3,Syteme3_2,Défaillance
+7/18/2023,Syteme3,Syteme3_2,Usure
+5/22/2023,Syteme3,Syteme3_3,Bugs/Erreurs
+8/30/2023,Syteme3,Syteme3_3,Défauts de programmation
+6/5/2023,Syteme3,Syteme3_4,Retards de rapport
+9/12/2023,Syteme3,Syteme3_4, Problèmes réseau
+1/17/2023,Syteme4,Syteme4_1,Arrêt inopiné
+4/8/2023,Syteme4,Syteme4_1,Défaillance électrique
+7/2/2023,Syteme4,Syteme4_1,Arrêt inopiné
+2/12/2023,Syteme4,Syteme4_2,Erreur de tri
+5/27/2023,Syteme4,Syteme4_2, Mauvais paramétrage
+3/19/2023,Syteme4,Syteme4_3,Panne batterie
+6/23/2023,Syteme4,Syteme4_3,Maintenance insuffisante
+4/15/2023,Syteme4,Syteme4_4,Bugs logiciels
+8/19/2023,Syteme4,Syteme4_4,Mises à jour manquantes

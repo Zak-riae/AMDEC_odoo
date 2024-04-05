@@ -1,0 +1,17 @@
+id_system,id_composante,Cause 
+Syteme1,Syteme1_1,Usure mécanique
+Syteme1,Syteme1_2,Poussière/obstruction
+Syteme1,Syteme1_3,Bug/Erreur de prog
+Syteme1,Syteme1_4,Panne électrique
+Syteme2,Syteme2_1,Mauvais réglage
+Syteme2,Syteme2_2,Résidus de peinture
+Syteme2,Syteme2_3,Température variable
+Syteme2,Syteme2_4,Défaillance mécanique
+Syteme3,Syteme3_1,Calibration inadéquate
+Syteme3,Syteme3_2,Usure/mauvais réglage
+Syteme3,Syteme3_3,Défauts de programmation
+Syteme3,Syteme3_4,Problèmes réseau
+Syteme4,Syteme4_1,Défaillance électrique
+Syteme4,Syteme4_2,Mauvais paramétrage
+Syteme4,Syteme4_3,Maintenance insuffisante
+Syteme4,Syteme4_4,Mises à jour manquantes

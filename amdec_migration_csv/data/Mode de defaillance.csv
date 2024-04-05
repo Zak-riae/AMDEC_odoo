@@ -1,0 +1,17 @@
+id_system,id_composante,Mode de défaillance
+Syteme1,Syteme1_1,"	Perte de précision"
+Syteme1,Syteme1_2,Défaillance de lecture
+Syteme1,Syteme1_3,Défaillance logicielle
+Syteme1,Syteme1_4,Arrêt inopiné
+Syteme2,Syteme2_1,Variation de teinte
+Syteme2,Syteme2_2,Obstruction
+Syteme2,Syteme2_3,Séchage inégal
+Syteme2,Syteme2_4,Arrêt inopiné
+Syteme3,Syteme3_1,Faux positifs/négatifs
+Syteme3,Syteme3_2,Défaillance
+Syteme3,Syteme3_3,Bugs/Erreurs
+Syteme3,Syteme3_4,Retards de rapport
+Syteme4,Syteme4_1,Arrêt inopiné
+Syteme4,Syteme4_2,Erreur de tri
+Syteme4,Syteme4_3,Panne batterie
+Syteme4,Syteme4_4,Bugs logiciels

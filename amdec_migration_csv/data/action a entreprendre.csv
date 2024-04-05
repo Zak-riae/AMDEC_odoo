@@ -1,0 +1,17 @@
+id_system,id_composante,Action a entreprendre
+Syteme1,Syteme1_1,Maintenance préventive
+Syteme1,Syteme1_2,Nettoyage régulier
+Syteme1,Syteme1_3,Mises à jour logicielles
+Syteme1,Syteme1_4,Inspection électrique
+Syteme2,Syteme2_1,Vérification réglages
+Syteme2,Syteme2_2,Nettoyage après chaque usage
+Syteme2,Syteme2_3,Contrôle température constante
+Syteme2,Syteme2_4,Maintenance préventive
+Syteme3,Syteme3_1,Calibration régulière
+Syteme3,Syteme3_2,"	Vérification et étalonnage"
+Syteme3,Syteme3_3,Mises à jour régulières
+Syteme3,Syteme3_4,Amélioration infrastructure réseau
+Syteme4,Syteme4_1,Inspection électrique
+Syteme4,Syteme4_2,Vérification paramètres
+Syteme4,Syteme4_3,"	Plan de maintenance"
+Syteme4,Syteme4_4,Mises à jour régulières
