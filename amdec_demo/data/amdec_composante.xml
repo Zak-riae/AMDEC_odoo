@@ -2,16 +2,68 @@
 <odoo>
     <data noupdate="1">
         <record id="amdec_composante_1" model="amdec.composante">
-            <field name="name">Roue</field>
+            <field name="name">Bras robotisé</field>
             <field name="system_id" ref="amdec_demo.amdec_system_1" />
         </record>
         <record id="amdec_composante_2" model="amdec.composante">
-            <field name="name">Roulement à bille</field>
+            <field name="name">Système de vision</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_1" />
+        </record>
+        <record id="amdec_composante_3" model="amdec.composante">
+            <field name="name">Unité de contrôle</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_1" />
+        </record>
+        <record id="amdec_composante_4" model="amdec.composante">
+            <field name="name">Plateforme de transport</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_1" />
+        </record>
+        <record id="amdec_composante_1" model="amdec.composante">
+            <field name="name">Cabine de peinture</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_2" />
+        </record>
+        <record id="amdec_composante_2" model="amdec.composante">
+            <field name="name">Pistolet de peinture</field>
             <field name="system_id" ref="amdec_demo.amdec_system_2" />
         </record>
         <record id="amdec_composante_3" model="amdec.composante">
-            <field name="name">Engrenage</field>
+            <field name="name">Système de séchage</field>
             <field name="system_id" ref="amdec_demo.amdec_system_2" />
+        </record>
+        <record id="amdec_composante_4" model="amdec.composante">
+            <field name="name">Convoyeurs d'entrée/sortie</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_2" />
+        </record>
+         <record id="amdec_composante_1" model="amdec.composante">
+            <field name="name">Banc de test</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_3" />
+        </record>
+         <record id="amdec_composante_2" model="amdec.composante">
+            <field name="name">Capteurs de mesure</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_3" />
+        </record>
+         <record id="amdec_composante_3" model="amdec.composante">
+            <field name="name">Logiciel de test</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_3" />
+        </record>
+         <record id="amdec_composante_4" model="amdec.composante">
+            <field name="name">Système de reporting</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_3" />
+        </record>
+         <record id="amdec_composante_1" model="amdec.composante">
+            <field name="name">Convoyeur</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_4" />
+        </record>
+        <record id="amdec_composante_2" model="amdec.composante">
+            <field name="name">Système de tri</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_4" />
+        </record>
+        <record id="amdec_composante_3" model="amdec.composante">
+            <field name="name">Transpalettes électriques</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_4" />
+        </record>
+        <record id="amdec_composante_4" model="amdec.composante">
+            <field name="name">Logiciel de gestion logistique</field>
+            <field name="system_id" ref="amdec_demo.amdec_system_4" />
         </record>
     </data>
 </odoo>
