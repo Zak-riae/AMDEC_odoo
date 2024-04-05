@@ -12,6 +12,7 @@
         "data/amdec_grille_severite.xml",
         "data/amdec_grille_occurence.xml",
         "data/amdec_defaillance.xml",
+        "data/amdec_context_type.xml",
         "data/amdec_period.xml",
         "data/amdec_project.xml",
         "data/amdec_system.xml",

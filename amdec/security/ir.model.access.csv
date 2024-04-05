@@ -2,6 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 amdec_action_historique_access_user_types_/_internal_user,amdec_action_historique Access User types / Internal User,model_amdec_action_historique,base.group_user,1,1,1,1
 amdec_amdec_access_user_types_/_internal_user,amdec_amdec Access User types / Internal User,model_amdec_amdec,base.group_user,1,1,1,1
 amdec_composante_access_user_types_/_internal_user,amdec_composante Access User types / Internal User,model_amdec_composante,base.group_user,1,1,1,1
+amdec_context_type_access_user_types_/_internal_user,amdec_context_type Access User types / Internal User,model_amdec_context_type,base.group_user,1,1,1,1
 amdec_defaillance_access_user_types_/_internal_user,amdec_defaillance Access User types / Internal User,model_amdec_defaillance,base.group_user,1,1,1,1
 amdec_grille_detectabilite_access_user_types_/_internal_user,amdec_grille_detectabilite Access User types / Internal User,model_amdec_grille_detectabilite,base.group_user,1,1,1,1
 amdec_grille_occurence_access_user_types_/_internal_user,amdec_grille_occurence Access User types / Internal User,model_amdec_grille_occurence,base.group_user,1,1,1,1

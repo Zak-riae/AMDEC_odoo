@@ -12,6 +12,7 @@
         "views/amdec_action_historique.xml",
         "views/amdec_amdec.xml",
         "views/amdec_composante.xml",
+        "views/amdec_context_type.xml",
         "views/amdec_defaillance.xml",
         "views/amdec_grille_detectabilite.xml",
         "views/amdec_grille_occurence.xml",

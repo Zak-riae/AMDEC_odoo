@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="amdec_context_type_001" model="amdec.context.type">
+            <field name="name">Produit</field>
+        </record>
+        <record id="amdec_context_type_002" model="amdec.context.type">
+            <field name="name">Processus</field>
+        </record>
+        <record id="amdec_context_type_003" model="amdec.context.type">
+            <field name="name">Machine - Fabrication - Réalisation du processus</field>
+        </record>
+    </data>
+</odoo>

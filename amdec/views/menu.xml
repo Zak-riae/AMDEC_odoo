@@ -95,10 +95,18 @@
     <menuitem id="menu_type" name="Type" sequence="3" parent="menu_config" />
 
     <menuitem
+        id="context_type"
+        name="Context"
+        action="amdec_context_type_context_type_action_window"
+        sequence="1"
+        parent="menu_type"
+    />
+
+    <menuitem
         id="reparation_type"
         name="Réparation"
         action="amdec_reparation_type_reparation_type_action_window"
-        sequence="1"
+        sequence="2"
         parent="menu_type"
     />
 
@@ -106,7 +114,7 @@
         id="panne_type"
         name="Panne"
         action="amdec_panne_type_panne_type_action_window"
-        sequence="2"
+        sequence="3"
         parent="menu_type"
     />
 

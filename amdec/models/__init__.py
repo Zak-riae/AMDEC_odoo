@@ -4,6 +4,7 @@ from . import (
     amdec_action_historique,
     amdec_amdec,
     amdec_composante,
+    amdec_context_type,
     amdec_defaillance,
     amdec_grille_detectabilite,
     amdec_grille_occurence,
