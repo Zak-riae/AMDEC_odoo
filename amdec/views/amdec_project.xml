@@ -120,19 +120,8 @@
         <field name="model">amdec.project</field>
         <field name="arch" type="xml">
             <search string="AMDEC project">
-                <filter domain="[('name','!=',False)]" name="name" string="Name" />
-                <filter
-                    domain="[('general_amdec_seuil_rpn','!=',False)]"
-                    name="general_amdec_seuil_rpn"
-                    string="General Amdec Seuil Rpn"
-                />
-                <!--                <filter-->
-                <!--                    domain="[('grille_occurence_ids','!=',False)]"-->
-                <!--                    name="grille_occurence_ids"-->
-                <!--                    string="Grilles occurence"-->
-                <!--                />-->
-                <!--                <filter domain="[('period_ids','!=',False)]" name="period_ids" string="P&#233;riodes" />-->
-                <filter domain="[('amdec_ids','!=',False)]" name="amdec_ids" string="AMDEC" />
+                <field name="name" />
+                <field name="description" />
             </search>
         </field>
     </record>

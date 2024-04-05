@@ -92,6 +92,7 @@ class AmdecLine(models.Model):
     system_id = fields.Many2one(
         related="composante_id.system_id",
         string="System",
+        store=True,
     )
 
     @api.depends(

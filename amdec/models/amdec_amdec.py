@@ -122,8 +122,8 @@ class AmdecAmdec(models.Model):
         for rec in self:
             # If an AMDEC line missing a rpn, it's True
             if rec.amdec_line_ids:
-                rec.has_missing_data = not [
-                    a for a in rec.amdec_line_ids if not a.rpn
-                ]
+                rec.has_missing_data = bool(
+                    [a for a in rec.amdec_line_ids if not a.rpn]
+                )
             else:
                 rec.has_missing_data = False

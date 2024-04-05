@@ -195,29 +195,30 @@
         <field name="model">amdec.line</field>
         <field name="arch" type="xml">
             <search string="AMDEC line">
-                <filter domain="[('amdec_id','!=',False)]" name="amdec_id" string="AMDEC" />
-                <filter domain="[('cause','!=',False)]" name="cause" string="Cause" />
-                <filter domain="[('composante_id','!=',False)]" name="composante_id" string="Composante" />
-                <filter domain="[('defaillance_id','!=',False)]" name="defaillance_id" string="D&#233;faillance" />
-                <filter
-                    domain="[('grille_occurence_id','!=',False)]"
-                    name="grille_occurence_id"
-                    string="Grille occurence"
-                />
-                <filter domain="[('detectabilite_id','!=',False)]" name="detectabilite_id" string="Detectabilite" />
-                <filter domain="[('effet','!=',False)]" name="effet" string="Effet" />
-                <filter domain="[('failure_mode_id','!=',False)]" name="failure_mode_id" string="Failure Mode" />
-                <filter
-                    domain="[('historique_action_ids','!=',False)]"
-                    name="historique_action_ids"
-                    string="Historique Action"
-                />
-                <filter domain="[('inspection_ids','!=',False)]" name="inspection_ids" string="Inspections" />
-                <filter domain="[('is_seuil_superior','=',True)]" name="is_seuil_superior" string="Is Seuil Superior" />
-                <filter domain="[('occurence','!=',False)]" name="occurence" string="Occurence" />
-                <filter domain="[('rpn','!=',False)]" name="rpn" string="Rpn" />
-                <filter domain="[('severite_id','!=',False)]" name="severite_id" string="Severite" />
-                <filter domain="[('system_id','!=',False)]" name="system_id" string="System" />
+                <group string="Group By" expand="1">
+                    <filter name="amdec_id" string="AMDEC" context="{'group_by':'amdec_id'}" />
+                    <filter name="defaillance_id" string="Défaillance" context="{'group_by':'defaillance_id'}" />
+                    <filter name="failure_mode_id" string="Failure mode" context="{'group_by':'failure_mode_id'}" />
+                    <filter
+                        name="grille_occurence_id"
+                        string="Grille occurence"
+                        context="{'group_by':'grille_occurence_id'}"
+                    />
+                    <filter
+                        name="detectabilite_id"
+                        string="Grille détectabilité"
+                        context="{'group_by':'detectabilite_id'}"
+                    />
+                    <filter name="severite_id" string="Grille sévérité" context="{'group_by':'severite_id'}" />
+                    <filter name="composante_id" string="Composante" context="{'group_by':'composante_id'}" />
+                    <filter name="system_id" string="Système" context="{'group_by':'system_id'}" />
+                    <filter name="rpn" string="RPN" context="{'group_by':'rpn'}" />
+                    <filter
+                        name="group_is_seuil_superior"
+                        string="Par seuil supérieur"
+                        context="{'group_by':'is_seuil_superior'}"
+                    />
+                </group>
             </search>
         </field>
     </record>

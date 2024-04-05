@@ -11,14 +11,14 @@
                         string="Mise à jour des occurences"
                         type="object"
                         class="btn-success"
-                        attrs="{'invisible':[('has_missing_data','=',True)]}"
+                        attrs="{'invisible':[('has_missing_data','=',False)]}"
                     />
                     <button
                         name="action_update_occurence"
                         string="Mise à jour des occurences"
                         type="object"
                         class="oe_highlight"
-                        attrs="{'invisible':[('has_missing_data','=',False)]}"
+                        attrs="{'invisible':[('has_missing_data','=',True)]}"
                     />
                     <!--                    <button name="action_execute_algo_2" string="Execute algo 2" type="object" class="oe_highlight" />-->
                     <button
@@ -122,14 +122,20 @@
         <field name="model">amdec.amdec</field>
         <field name="arch" type="xml">
             <search string="AMDEC">
-                <filter domain="[('name','!=',False)]" name="name" string="Name" />
-                <filter
-                    domain="[('amdec_precedent_id','!=',False)]"
-                    name="amdec_precedent_id"
-                    string="AMDEC pr&#233;c&#233;dent"
-                />
-                <filter domain="[('amdec_project_id','!=',False)]" name="amdec_project_id" string="Project" />
-                <filter domain="[('amdec_line_ids','!=',False)]" name="amdec_line_ids" string="Modes de défaillance" />
+                <field name="name" />
+                <field name="date_debut" />
+                <field name="date_fin" />
+                <filter domain="[('has_missing_data','=',True)]" name="missing_data" string="Missing data" />
+                <group string="Group By" expand="1">
+                    <filter name="amdec_project_id" string="Project" context="{'group_by':'amdec_project_id'}" />
+                    <filter
+                        name="amdec_precedent_id"
+                        string="AMDEC précédent"
+                        context="{'group_by':'amdec_precedent_id'}"
+                    />
+                    <filter name="date_debut" string="Date début" context="{'group_by':'date_debut'}" />
+                    <filter name="date_fin" string="Date fin" context="{'group_by':'date_fin'}" />
+                </group>
             </search>
         </field>
     </record>
