@@ -51,6 +51,7 @@ class AmdecLine(models.Model):
     )
 
     occurence = fields.Integer(
+        readonly=True,
         help=(
             "Calcul du nombre de fréquence sur l'ensemble des inspections par"
             " période de temps en appliquant la grille des seuils d'occurences"

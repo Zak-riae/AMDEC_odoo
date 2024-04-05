@@ -15,6 +15,23 @@
                         <field name="effet" />
                         <field name="action_entreprendre" />
                     </group>
+                    <notebook>
+                        <page string="AMDEC Lines">
+                            <group>
+                                <field name="amdec_line_ids" />
+                            </group>
+                        </page>
+                        <page string="Inspections">
+                            <group>
+                                <field name="inspection_ids" />
+                            </group>
+                        </page>
+                        <page string="Actions historique">
+                            <group>
+                                <field name="action_historique_ids" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
